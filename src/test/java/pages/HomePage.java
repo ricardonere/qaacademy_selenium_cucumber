@@ -68,7 +68,7 @@ public class HomePage {
     }
     public void fecharBotaoModal() throws InterruptedException {
         driver.findElement(By.xpath(fecharModal)).click();
-        Thread.sleep( 4000);
+        Thread.sleep( 3000);
     }
     public void preencherEmailLogin(){
         driver.findElement(By.xpath(emailLogin)).sendKeys("teste@teste.com");
