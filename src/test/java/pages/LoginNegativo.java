@@ -1,11 +1,9 @@
 package pages;
 
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public class HomePage {
+public class LoginNegativo {
     WebDriver driver;
     String botaoRegistrar = "//button[contains(text(),'Registrar')]";
     String email = "//body/div[@id='__next']/div[1]/div[2]/div[1]/div[2]/form[1]/div[2]/input[1]";
@@ -23,18 +21,7 @@ public class HomePage {
 
     String botaoAcessar = "//button[contains(text(),'Acessar')]";
 
-    String botaoTransferencia = "//body/div[@id='__next']/div[1]/div[3]/div[2]/div[1]/a[1]/span[1]/img[1]";
-
-    String numeroDaConta = "//body/div[@id='__next']/div[1]/div[3]/form[1]/div[1]/div[1]/input[1]";
-
-    String digitoDaConta = "//body/div[@id='__next']/div[1]/div[3]/form[1]/div[1]/div[2]/input[1]";
-
-    String valorTransferencia = "//body/div[@id='__next']/div[1]/div[3]/form[1]/div[2]/input[1]";
-
-    String descricaoTransferencia = "//body/div[@id='__next']/div[1]/div[3]/form[1]/div[3]/input[1]";
-
-    String transferirAgora = "//button[contains(text(),'Transferir agora')]";
-    public HomePage(WebDriver driverDoTeste) {
+    public void HomePage(WebDriver driverDoTeste) {
         this.driver = driverDoTeste;
     }
 
@@ -80,26 +67,5 @@ public class HomePage {
         driver.findElement(By.xpath(botaoAcessar)).click();
     }
 
-    public void clicarTransferencia(){
-        driver.findElement(By.xpath(botaoTransferencia)).click();
-    }
-    public void preencherNumeroConta(){
-        driver.findElement(By.xpath(numeroDaConta)).sendKeys("123456789");
-    }
-    public void digitoDaConta(){
-        driver.findElement(By.xpath(digitoDaConta)).sendKeys("0");
-    }
-    public void valorTransferencia(){
-        driver.findElement(By.xpath(valorTransferencia)).sendKeys("9000000");
-    }
-    public void descricaoTransferencia(){
-        driver.findElement(By.xpath(descricaoTransferencia)).sendKeys("Compra da casa");
-    }
-    public void transferirAgora(){
-        driver.findElement(By.xpath(transferirAgora)).click();
-    }
+
 }
-
-
-
-

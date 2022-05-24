@@ -9,19 +9,19 @@ import pages.HomePage;
 
 import java.util.concurrent.TimeUnit;
 
-public class TesteCadastro {
+public class TesteTransferencia {
     WebDriver driver;
     HomePage homePage;
 
     @Before
     public void setup() throws InterruptedException {
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         homePage = new HomePage(driver);
         driver.get("http://localhost:3000/");
     }
     @Test
-    public void testeCadastro() throws InterruptedException {
+    public void testeTransferencia() throws InterruptedException {
         homePage.clicarRegistrar();
         homePage.preencherEmail();
         homePage.preencherNome();
@@ -45,3 +45,4 @@ public class TesteCadastro {
         driver.quit();
     }
 }
+

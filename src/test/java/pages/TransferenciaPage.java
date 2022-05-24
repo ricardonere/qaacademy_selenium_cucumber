@@ -1,11 +1,9 @@
 package pages;
 
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public class HomePage {
+public class TransferenciaPage {
     WebDriver driver;
     String botaoRegistrar = "//button[contains(text(),'Registrar')]";
     String email = "//body/div[@id='__next']/div[1]/div[2]/div[1]/div[2]/form[1]/div[2]/input[1]";
@@ -16,7 +14,6 @@ public class HomePage {
     String cadastrar = "//button[contains(text(),'Cadastrar')]";
 
     String fecharModal = "//*[@id='btnCloseModal']";
-
     String emailLogin = "//body/div[@id='__next']/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/input[1]";
 
     String senhaLogin = "//body/div[@id='__next']/div[1]/div[2]/div[1]/div[1]/form[1]/div[2]/div[1]/input[1]";
@@ -34,11 +31,9 @@ public class HomePage {
     String descricaoTransferencia = "//body/div[@id='__next']/div[1]/div[3]/form[1]/div[3]/input[1]";
 
     String transferirAgora = "//button[contains(text(),'Transferir agora')]";
-    public HomePage(WebDriver driverDoTeste) {
+    public void HomePage(WebDriver driverDoTeste) {
         this.driver = driverDoTeste;
     }
-
-
     public void clicarRegistrar() {
         driver.findElement(By.xpath(botaoRegistrar)).click();
     }
@@ -68,10 +63,12 @@ public class HomePage {
     }
     public void fecharBotaoModal() throws InterruptedException {
         driver.findElement(By.xpath(fecharModal)).click();
-        Thread.sleep( 4000);
+        Thread.sleep( 3000);
     }
+
     public void preencherEmailLogin(){
         driver.findElement(By.xpath(emailLogin)).sendKeys("teste@teste.com");
+
     }
     public void preencherSenhaLogin(){
         driver.findElement(By.xpath(senhaLogin)).sendKeys("415263");
@@ -99,7 +96,3 @@ public class HomePage {
         driver.findElement(By.xpath(transferirAgora)).click();
     }
 }
-
-
-
-

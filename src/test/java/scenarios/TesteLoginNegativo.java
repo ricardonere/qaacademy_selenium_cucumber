@@ -9,14 +9,14 @@ import pages.HomePage;
 
 import java.util.concurrent.TimeUnit;
 
-public class TesteCadastro {
+public class TesteLoginNegativo {
     WebDriver driver;
     HomePage homePage;
 
     @Before
     public void setup() throws InterruptedException {
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         homePage = new HomePage(driver);
         driver.get("http://localhost:3000/");
     }
@@ -33,12 +33,7 @@ public class TesteCadastro {
         homePage.preencherEmailLogin();
         homePage.preencherSenhaLogin();
         homePage.clicarAcessar();
-        homePage.clicarTransferencia();
-        homePage.preencherNumeroConta();
-        homePage.digitoDaConta();
-        homePage.valorTransferencia();
-        homePage.descricaoTransferencia();
-        homePage.transferirAgora();
+
     }
     @After
     public void encerra(){
