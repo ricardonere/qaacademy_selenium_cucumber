@@ -16,7 +16,7 @@ public class TesteCadastro {
     @Before
     public void setup() throws InterruptedException {
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         homePage = new HomePage(driver);
         driver.get("http://localhost:3000/");
     }

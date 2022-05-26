@@ -8,7 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import pages.HomePage;
 
 import java.util.concurrent.TimeUnit;
-public class TesteTransferencia {
+
+public class TesteExtrato {
     WebDriver driver;
     HomePage homePage;
 
@@ -20,7 +21,7 @@ public class TesteTransferencia {
         driver.get("http://localhost:3000/");
     }
     @Test
-    public void testeTransferencia() throws InterruptedException {
+    public void testeExtrato() throws InterruptedException {
         homePage.clicarRegistrar();
         homePage.preencherEmail();
         homePage.preencherNome();
@@ -32,16 +33,13 @@ public class TesteTransferencia {
         homePage.preencherEmailLogin();
         homePage.preencherSenhaLogin();
         homePage.clicarAcessar();
-        homePage.clicarTransferencia();
-        homePage.preencherNumeroConta();
-        homePage.digitoDaConta();
-        homePage.valorTransferencia();
-        homePage.descricaoTransferencia();
-        homePage.transferirAgora();
-    }
+
+
+}
     @After
     public void encerra(){
         driver.quit();
     }
 }
+
 
