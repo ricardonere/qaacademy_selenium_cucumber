@@ -66,7 +66,7 @@ public class TransferenciaPage {
         Thread.sleep( 3000);
     }
 
-    public void preencherEmailLogin(){
+    public void preencherEmailLogin(String emailLogin){
         driver.findElement(By.xpath(emailLogin)).sendKeys("teste@teste.com");
 
     }
